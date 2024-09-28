@@ -11,10 +11,12 @@ namespace RE4_FIX_TOOL
     {
         internal static void Main(string[] args)
         {
+            System.Globalization.CultureInfo.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
+
             Console.WriteLine("# RE4 FIX TOOL");
             Console.WriteLine("# By: JADERLINK");
             Console.WriteLine("# youtube.com/@JADERLINK");
-            Console.WriteLine("# VERSION 1.0.0 (2024-09-28)");
+            Console.WriteLine("# VERSION 1.0.1 (2024-09-28)");
 
             if (args.Length == 0)
             {
