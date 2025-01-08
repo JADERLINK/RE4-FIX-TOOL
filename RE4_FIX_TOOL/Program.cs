@@ -16,7 +16,7 @@ namespace RE4_FIX_TOOL
             Console.WriteLine("# RE4 FIX TOOL");
             Console.WriteLine("# By: JADERLINK");
             Console.WriteLine("# youtube.com/@JADERLINK");
-            Console.WriteLine("# VERSION 1.0.1 (2024-09-28)");
+            Console.WriteLine("# VERSION 1.0.2 (2025-01-08)");
 
             if (args.Length == 0)
             {
@@ -27,7 +27,15 @@ namespace RE4_FIX_TOOL
             }
             else
             {
-                for (int i = 0; i < args.Length; i++)
+                bool usingBatFile = false;
+                int start = 0;
+                if (args[0].ToLowerInvariant() == "-bat")
+                {
+                    usingBatFile = true;
+                    start = 1;
+                }
+
+                for (int i = start; i < args.Length; i++)
                 {
                     if (File.Exists(args[i]))
                     {
@@ -81,9 +89,16 @@ namespace RE4_FIX_TOOL
                     }
 
                 }
+
+                Console.WriteLine("Finished!!!");
+
+                if (!usingBatFile)
+                {
+                    Console.WriteLine("Press any key to close the console.");
+                    Console.ReadKey();
+                }
             }
          
-            Console.WriteLine("Finished!!!");
         }
     }
 }

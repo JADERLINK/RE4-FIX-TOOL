@@ -58,7 +58,14 @@ namespace RE4_FIX_TOOL
                 byte[] imagebytes = new byte[imgList[i].length];
                 fix.BaseStream.Read(imagebytes, 0, imagebytes.Length);
 
-                uint imagemagic = BitConverter.ToUInt32(imagebytes, 0);
+                uint imagemagic = 0;
+                try
+                {
+                    imagemagic = BitConverter.ToUInt32(imagebytes, 0);
+                }
+                catch (Exception)
+                {
+                }
 
                 string Extension = "error";
 
