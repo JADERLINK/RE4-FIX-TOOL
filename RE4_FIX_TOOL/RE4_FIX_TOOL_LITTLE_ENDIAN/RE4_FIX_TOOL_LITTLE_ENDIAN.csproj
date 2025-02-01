@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1BE1BD57-6D48-4D00-BA95-414265E5A948}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>RE4_FIX_TOOL</RootNamespace>
-    <AssemblyName>RE4_FIX_TOOL</AssemblyName>
+    <RootNamespace>RE4_FIX_TOOL_LITTLE_ENDIAN</RootNamespace>
+    <AssemblyName>RE4_FIX_TOOL_LITTLE_ENDIAN</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,17 +38,11 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>RE4_FIX_TOOL.Program</StartupObject>
+    <StartupObject>RE4_FIX_TOOL_LITTLE_ENDIAN.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extract.cs" />

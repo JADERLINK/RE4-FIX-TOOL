@@ -1,12 +1,15 @@
 # RE4-FIX-TOOL
-Extract and repack RE4 FIX files (RE4 UHD/PS4/NS)
+Extract and repack RE4 FIX files (RE4 UHD/PS4/NS/X360)
 
 **Translate from Portuguese Brazil**
 
 Programa destinado a extrair e reempacotar arquivos .fix das versões UHD, PS4 e NS;
 <br> Ao extrair será gerado um arquivo de extenção .idxfix, ele será usado para o repack.
 
-**update: 1.0.2**
+**Update: 1.0.3**
+<br> Adicionado a tool Big Endian, para os arquivos fix da versão de Xbox360;
+
+**Update: 1.0.2**
 <br>Corrigido bug ao extrair arquivos de imagens com 0 de tamanho.
 <br>Agora, ao arrastar arquivos sobre o programa, ele vai ficar aberto após extrair/reempacotar.
 <br>Os arquivos bat funcionam iguais a antes, mas agora adicionei mais um parâmetro neles.
@@ -33,6 +36,12 @@ Exemplo:
 A versão de NS e UHD só aceita imagens no formato DDS;
 <br>A versão de PS4 só aceita imagens no formato GNF;
 <br>Nota: Não testei o jogo com imagem TGA, mas o programa aceita fazer repack com esse formato de imagem também;
+<br> Nota2: A versão de Xbox360 só aceita arquivos PTC;
+
+### BIG ENDIAN vs LITTLE ENDIAN
+
+--> LITTLE ENDIAN: UHD, PS4 e NS;
+<br> --> BIG ENDIAN: X360;
 
 **At.te: JADERLINK**
-<br>2025-01-08
+<br>2025-02-01

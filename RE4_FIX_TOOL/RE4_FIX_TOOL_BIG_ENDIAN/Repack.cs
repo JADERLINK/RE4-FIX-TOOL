@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using SimpleEndianBinaryIO;
 
-namespace RE4_FIX_TOOL
+namespace RE4_FIX_TOOL_BIG_ENDIAN
 {
     internal static class Repack
     {
@@ -13,9 +14,9 @@ namespace RE4_FIX_TOOL
         {
             FileInfo fileInfo = new FileInfo(file);
             string baseName = Path.GetFileNameWithoutExtension(fileInfo.Name);
-            string baseDiretory = fileInfo.DirectoryName;
+            string baseDirectory = fileInfo.DirectoryName;
 
-            string ImageFolder = Path.Combine(baseDiretory, baseName);
+            string ImageFolder = Path.Combine(baseDirectory, baseName);
 
             if (Directory.Exists(ImageFolder)) 
             {
@@ -24,11 +25,11 @@ namespace RE4_FIX_TOOL
 
                 while (asFile)
                 {
-                    string ddspath = Path.Combine(ImageFolder, iCount.ToString("D4") + ".dds");
-                    string gnfpath = Path.Combine(ImageFolder, iCount.ToString("D4") + ".gnf");
-                    string tgapath = Path.Combine(ImageFolder, iCount.ToString("D4") + ".tga");
+                    
+                    string ptcpath = Path.Combine(ImageFolder, iCount.ToString("D4") + ".ptc");
+                    
 
-                    if (File.Exists(ddspath) || File.Exists(gnfpath) || File.Exists(tgapath))
+                    if (File.Exists(ptcpath))
                     {
                         iCount++;
                     }
@@ -52,8 +53,8 @@ namespace RE4_FIX_TOOL
                     string fixName = baseName + ".fix";
                     fixName = baseName.Length > 0 ? fixName : "NoName.fix";
 
-                    FileInfo packFileInfo = new FileInfo(Path.Combine(baseDiretory, fixName));
-                    fixFile = new BinaryWriter(packFileInfo.Create());
+                    FileInfo packFileInfo = new FileInfo(Path.Combine(baseDirectory, fixName));
+                    fixFile = new EndianBinaryWriter(packFileInfo.Create(), Endianness.BigEndian);
                 }
                 catch (Exception ex)
                 {
@@ -62,29 +63,18 @@ namespace RE4_FIX_TOOL
 
                 if (fixFile != null)
                 {
-
                     uint offsetToOffset = 0;
                     uint nextOffset = iCount * 3 * 4; // são 3 campos e cada campo tem 4 bytes
 
                     for (int i = 0; i < iCount; i++)
                     {
-                        string ddspatch = Path.Combine(ImageFolder, i.ToString("D4") + ".dds");
-                        string gnfpath = Path.Combine(ImageFolder, i.ToString("D4") + ".gnf");
-                        string tgapatch = Path.Combine(ImageFolder, i.ToString("D4") + ".tga");
+                        
+                        string ptcpath = Path.Combine(ImageFolder, i.ToString("D4") + ".ptc");
+                        
 
                         FileInfo imageFile = null;
-                        if (File.Exists(gnfpath))
-                        {
-                            imageFile = new FileInfo(gnfpath);
-                        }
-                        else if (File.Exists(ddspatch))
-                        {
-                            imageFile = new FileInfo(ddspatch);
-                        }
-                        else if (File.Exists(tgapatch))
-                        {
-                            imageFile = new FileInfo(tgapatch);
-                        }
+                        if (File.Exists(ptcpath)) { imageFile = new FileInfo(ptcpath); }
+                        
 
 
                         if (imageFile != null)

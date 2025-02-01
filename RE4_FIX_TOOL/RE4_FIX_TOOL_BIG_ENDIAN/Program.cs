@@ -5,18 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace RE4_FIX_TOOL
+namespace RE4_FIX_TOOL_BIG_ENDIAN
 {
-    internal class Program
+    class Program
     {
-        internal static void Main(string[] args)
+        static void Main(string[] args)
         {
             System.Globalization.CultureInfo.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
 
-            Console.WriteLine("# RE4 FIX TOOL");
+            Console.WriteLine("# RE4 FIX TOOL BIG ENDIAN");
             Console.WriteLine("# By: JADERLINK");
             Console.WriteLine("# youtube.com/@JADERLINK");
-            Console.WriteLine("# VERSION 1.0.2 (2025-01-08)");
+            Console.WriteLine("# github.com/JADERLINK");
+            Console.WriteLine("# VERSION 1.0.3 (2025-02-01)");
 
             if (args.Length == 0)
             {
@@ -65,7 +66,7 @@ namespace RE4_FIX_TOOL
                                 }
 
                             }
-                            else if (info.Extension.ToUpperInvariant() == ".IDXFIX")
+                            else if (info.Extension.ToUpperInvariant() == ".IDXBIGFIX")
                             {
                                 try
                                 {
@@ -98,7 +99,7 @@ namespace RE4_FIX_TOOL
                     Console.ReadKey();
                 }
             }
-         
+
         }
     }
 }

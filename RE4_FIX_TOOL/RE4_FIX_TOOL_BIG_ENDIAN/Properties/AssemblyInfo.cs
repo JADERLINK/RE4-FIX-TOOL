@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("RE4_FIX_TOOL")]
-[assembly: AssemblyDescription("RE4_FIX_TOOL by JADERLINK")]
+[assembly: AssemblyTitle("RE4_FIX_TOOL_BIG_ENDIAN")]
+[assembly: AssemblyDescription("RE4_FIX_TOOL_BIG_ENDIAN by JADERLINK")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("JADERLINK")]
-[assembly: AssemblyProduct("RE4_FIX_TOOL")]
+[assembly: AssemblyProduct("RE4_FIX_TOOL_BIG_ENDIAN")]
 [assembly: AssemblyCopyright("Copyright ©JADERLINK 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("1be1bd57-6d48-4d00-ba95-414265e5a948")]
+[assembly: Guid("0630d60b-7c90-42ff-b6ca-cafbf4dae5c7")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //

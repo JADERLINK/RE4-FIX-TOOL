@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35229.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RE4_FIX_TOOL_LITTLE_ENDIAN", "RE4_FIX_TOOL_LITTLE_ENDIAN\RE4_FIX_TOOL_LITTLE_ENDIAN.csproj", "{1BE1BD57-6D48-4D00-BA95-414265E5A948}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SimpleEndianBinaryIO", "SimpleEndianBinaryIO\SimpleEndianBinaryIO.shproj", "{5DDB0D8F-D1EA-479F-8FAC-BE2B5C6BAB65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RE4_FIX_TOOL_BIG_ENDIAN", "RE4_FIX_TOOL_BIG_ENDIAN\RE4_FIX_TOOL_BIG_ENDIAN.csproj", "{0630D60B-7C90-42FF-B6CA-CAFBF4DAE5C7}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SimpleEndianBinaryIO\SimpleEndianBinaryIO.projitems*{0630d60b-7c90-42ff-b6ca-cafbf4dae5c7}*SharedItemsImports = 4
+		SimpleEndianBinaryIO\SimpleEndianBinaryIO.projitems*{5ddb0d8f-d1ea-479f-8fac-be2b5c6bab65}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE1BD57-6D48-4D00-BA95-414265E5A948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE1BD57-6D48-4D00-BA95-414265E5A948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE1BD57-6D48-4D00-BA95-414265E5A948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE1BD57-6D48-4D00-BA95-414265E5A948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0630D60B-7C90-42FF-B6CA-CAFBF4DAE5C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0630D60B-7C90-42FF-B6CA-CAFBF4DAE5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0630D60B-7C90-42FF-B6CA-CAFBF4DAE5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0630D60B-7C90-42FF-B6CA-CAFBF4DAE5C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1518A09F-0DA1-451C-A905-25DB03B8C38C}
+	EndGlobalSection
+EndGlobal
